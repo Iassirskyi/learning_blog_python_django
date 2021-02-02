@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block title %}delete{% endblock %}
+
+{% block page_header %}
+    <h2>Delete</h2>
+{% endblock page_header %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <p>Are you sure want to delete '{{ article.title }}'</p>
+        {% buttons %}
+            <button name="submit" class="btn btn-primary">Confirm</button>
+        {% endbuttons %}
+    </form>    
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block title %}Articles{% endblock %}
+
+{% block page_header %}
+    <h1>Articles</h1>
+{% endblock page_header %}
+
+{% block content %}
+
+<ul>
+    {% for article in object_list %}
+        <li><h3>
+            <a href="{% url 'article_detail' article.pk%}">{{ article }}</a>
+        </h3></li>
+    {% empty %}
+        <li><h3>No article have been added yet.</h3></li>
+    {% endfor %}
+</ul>
+<h3><a href="{% url 'article_new' %}">Add a new article</h3></a>
+{% endblock %}

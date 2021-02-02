@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block title %}{{object.title}}{% endblock %}
+
+{% block page_header %}
+    <h3>{{ object.title }}</h3>
+{% endblock page_header %}
+
+
+{% block content %}
+    <p>
+        <a href="{% url 'article_edit' article.pk %}">Edit</a> |
+        <a href="{% url 'article_delete' article.pk %}">Delete</a> |
+        <a href="{% url 'entry_new' article.pk %}">Add new entry</a>
+    </p>
+
+    <ul>
+        {% for entry in object.entries.all %}
+            <div class="card mb-3">
+                <h4 class="card-header">
+                    <small><a href="{% url 'entry_detail' entry.pk %}">
+                        {{entry.title}}
+                    </a></small>
+                </h4>
+                <div class="card-body">
+                    {{ entry|linebreaks }}
+                    {{ entry.date|date:'M d, Y' }}
+                </div>
+            </div>
+        {% empty %}
+        <p>There are no entries for this topic yet.</p>
+        {% endfor %}
+    </ul>
+{% endblock %}

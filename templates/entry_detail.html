@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block title %}{{object.title}}{% endblock %}
+
+{% block page_header %}
+    <h3>{{ object.title }}</h3>
+{% endblock page_header %}
+
+
+{% block content %}
+            <div class="card mb-3">
+                <h4 class="card-header">
+                    <small><a href="{% url 'entry_edit' entry.pk %}">
+                        edit entry
+                    </a></small> |
+                    <small><a href="{% url 'entry_delete' entry.pk %}">
+                        delete
+                    </a></small>
+                <div class="card-body">
+                    {{ object.body|linebreaks }}
+                    {{ object.date|date:'M d, Y' }}
+                </div>
+            </div>
+    </ul>
+{% endblock %}
