@@ -137,7 +137,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.EmailBackend'
 
 
 REST_FRAMEWORK = {
-    'DEFAULT_PREMISSION_CLASSES': [
-    'rest_framework.premissions.AllowAny',
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
     ]
 }
