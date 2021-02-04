@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'topics.apps.TopicsConfig',
     'articles.apps.ArticlesConfig',
     'bootstrap4',
+    'rest_framework',
+    'api.apps.ApiConfig',
 ]
 
 MIDDLEWARE = [
@@ -132,3 +134,10 @@ LOGOUT_REDIRECT_URL = 'home'
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.EmailBackend'
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_PREMISSION_CLASSES': [
+    'rest_framework.premissions.AllowAny',
+    ]
+}
