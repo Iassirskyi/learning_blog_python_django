@@ -21,6 +21,8 @@ wrapt = "==1.12.1"
 Django = "==3.1.5"
 gunicorn = "*"
 djangorestframework = "*"
+django-rest-auth = "*"
+django-allauth = "*"
 
 [dev-packages]
 
