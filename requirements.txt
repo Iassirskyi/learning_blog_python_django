@@ -1,3 +1,4 @@
+appdirs==1.4.4
 asgiref==3.3.1
 astroid==2.4.2
 beautifulsoup4==4.9.3
@@ -7,11 +8,13 @@ chardet==4.0.0
 cryptography==3.4.7
 Cython==0.29.22
 defusedxml==0.7.1
+distlib==0.3.1
 Django==3.1.5
 django-allauth==0.44.0
 django-bootstrap4==2.3.1
 django-rest-auth==0.9.5
 djangorestframework==3.12.4
+filelock==3.0.12
 idna==2.10
 isort==5.7.0
 lazy-object-proxy==1.4.3
@@ -20,6 +23,7 @@ Markdown @ file:///buildstream/freedesktop-sdk/components/python3-markdown.bst
 mccabe==0.6.1
 meson @ file:///buildstream/freedesktop-sdk/components/meson.bst
 oauthlib==3.1.0
+Pillow==8.2.0
 pycparser==2.20
 Pygments==2.8.0.dev20210403
 PyJWT==2.0.1
@@ -33,4 +37,5 @@ soupsieve==2.1
 sqlparse==0.4.1
 toml==0.10.2
 urllib3==1.26.4
+virtualenv==20.4.3
 wrapt==1.12.1
