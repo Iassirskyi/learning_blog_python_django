@@ -1,6 +1,7 @@
 env/
 venv/
-media/
+/media
+/*.ssqlite3
 .vscode/
 __pycache__
 .idea/
