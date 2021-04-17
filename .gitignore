@@ -1,6 +1,6 @@
 env/
 venv/
-*media/
+media/
 .vscode/
 __pycache__
 .idea/
