@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% load bootstrap4 %}
 
 {% block title %}{{object.title}}{% endblock %}
@@ -17,6 +18,10 @@
                     <small><a href="{% url 'entry_delete' entry.pk %}">
                         delete
                     </a></small>
+
+                <div class="card-body">
+                    <img src="{% if object.screen %}{{ object.screen.url }}{% endif %}">
+                </div>
                 <div class="card-body">
                     {{ object.body|linebreaks }}
                     {{ object.date|date:'M d, Y' }}

@@ -64,7 +64,7 @@ class EntryDetailView(DetailView):
 
 class EntryUpdateView(LoginRequiredMixin, UpdateView):
     model = Entry
-    fields = ('title', 'body',)
+    fields = ('title', 'body', 'screen',)
     template_name = 'entry_edit.html'
     login_url = 'login'
 
@@ -96,7 +96,7 @@ class EntryDeleteView(LoginRequiredMixin, DeleteView):
 class EntryCreateView(LoginRequiredMixin, CreateView):
     model = Entry
     template_name = 'entry_new.html'
-    fields = ('title', 'body',)
+    fields = ('title', 'body', 'screen',)
     login_url = 'login'
     #success_url = reverse_lazy('article_list')
 
